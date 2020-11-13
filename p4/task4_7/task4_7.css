@@ -1,0 +1,66 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+p {
+	margin: 0;
+  margin-left: 3px;
+  font-family: 'Roboto';
+}
+
+
+.weather {
+	display: block;
+	padding: 5px;
+  margin: 5px;
+  width: 94px;
+}
+
+.date {
+	text-align: left;
+	color: black;
+	font-size: 25px;
+}
+
+.date_low{
+    color: grey;
+    text-align: left;
+    font-size: 80%;
+}
+
+.deg {
+	text-align: left;
+	font-size: 100%;
+}
+.deg_night{
+  margin-top: 2px;
+	text-align: left;
+	font-size: 80%;
+	color: grey;
+}
+
+.weather:hover{
+	box-shadow: 0 0 3px #000;
+}
+.upper_part{
+  display: flex;
+  flex-direction: row;
+}
+.head_pogoda{
+  font-size: 130%;
+  margin: 10px;
+}
+.head{
+  background: #cfced1;
+  border-radius: 5px;
+  font-size: 80%;
+  margin: 10px;
+  padding: 0.5%;
+}
+.con{
+  padding-top: 5px;
+  font-size: 80%;
+  color: grey;
+}
+.all{
+  display: flex;
+  flex-direction: row;
+}

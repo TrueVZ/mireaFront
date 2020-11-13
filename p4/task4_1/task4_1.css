@@ -1,0 +1,33 @@
+span{
+    font-size: 25px;
+}
+span.first::before{
+    content: "\2018	";
+}
+span.first::after{
+    content: "\2019";
+}
+span.second::before{
+    content: "\201A"
+}
+span.second::after{
+    content: "\201A";
+}
+span.third::before{
+    content: "\201c	"
+}
+span.third::after{
+    content: "\201d";
+}
+span.four::before{
+    content: "\201e"
+}
+span.four::after{
+    content: "\201e";
+}
+span.five::before{
+    content: "\00ab	"
+}
+span.five::after{
+    content: "\00bb	";
+}

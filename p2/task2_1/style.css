@@ -1,0 +1,63 @@
+.header-frame{
+    background-color: lightseagreen ;
+}
+
+.header-text{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+}
+
+.menu-frame{
+    background-color: lightgreen;
+}
+
+.menu-text{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.main-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 55px;
+}
+
+.page1-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.box1 {
+    border-top: 8px solid #001f3f;
+    background-color: lightcoral;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: center 
+  }
+
+.box2 {
+    margin-right: 25px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(70,252,218,1) 100%);
+    border-top: 8px solid #001f3f;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.padded-multiline { 
+    line-height: 1.4; 
+    padding: 2px 0; 
+    margin: 20px auto;
+    display: inline;
+    background-color: pink;
+ 
+}

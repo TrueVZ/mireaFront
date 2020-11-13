@@ -1,0 +1,50 @@
+ li{
+        font-size: 30px;
+    }
+    .first{
+        text-decoration: underline;
+        text-decoration-style:  wavy;
+        text-decoration-color: royalblue;
+        color: royalblue;
+    }
+    .first1{
+        text-decoration: underline;
+        text-decoration-style:  dashed;
+        text-decoration-color: royalblue;
+        color: royalblue;
+    }
+
+    .first2{
+        color:royalblue;
+    }
+    .second{
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: slateblue;
+        color: slateblue;
+    }
+    .second1{
+        color: slateblue;
+    }
+    .third{
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-decoration-color: green ;
+        color: green;
+    }
+    .third1{
+        color:green;
+    }
+    .four{
+        text-decoration: underline;
+        text-decoration-style: initial;
+        text-decoration-color: orange;
+        color: orange;
+    }
+    .four1{
+        color: orange;
+    }
+    ul{
+        padding: 0;
+        margin-bottom: 10px;
+    }

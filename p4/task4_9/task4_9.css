@@ -1,0 +1,51 @@
+    button{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        transition: 1s;
+        background-size: 200% auto;
+    }
+    .second{
+        transform: 2s;
+        background-image: linear-gradient(to right, rgb(233, 32, 32) 0%, 
+        rgb(228, 139, 38) 55%, #f6d365 100%); 
+    }
+    .second:hover{
+        box-shadow: inset 3px 4px 4px #000;
+        background-position: right center;
+    }
+    .third{
+        transform:  1s;
+        background-color: green;
+        border: solid 1px white;
+    }
+    .third:hover{
+        box-shadow: inset 3px 4px 4px #000;
+        background-color: red;
+        border: solid 3px green;
+    }
+    .cube{ 
+        margin: 50px;
+        width: 300px; 
+        height: 100px; 
+        transform-style: preserve-3d; 
+        transition: transform 0.5s; 
+    } 
+    .side{ 
+        position: absolute; 
+        width: 300px; 
+        height: 100px; 
+    } 
+
+    .front{ 
+        border: 1px solid black; 
+        transform: translateZ(50px); 
+    } 
+
+    .back{ 
+        border: 1px solid black; 
+        transform: translateY(50px) rotateX(-90deg); 
+    } 
+    .cube:hover{ 
+        transform: rotateX(90deg); 
+    } 

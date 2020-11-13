@@ -1,0 +1,14 @@
+.paragraph1 {
+    background-color: bisque;
+    color: black;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+  }
+.paragraph2 {
+    background-color: olive;
+    color: white;
+    border: 3px solid black;
+    margin: 15px;
+    padding: 20px;
+}

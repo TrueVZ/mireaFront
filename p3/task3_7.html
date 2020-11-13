@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3_7</title>
+</head>
+<style>
+
+
+input:required:invalid ~ span::after {
+  content: " * ";
+  color: red;
+}
+input:required:valid ~ span::after
+{
+    color: green;
+    content: "\2611";
+}
+div{
+  margin-bottom: 10px;
+}
+
+
+
+</style>
+<body>
+  <div>
+    
+    <label> Name</label>
+    <input type="text" required>
+    <span></span>
+    </div>
+  <div>
+    <label>Email</label>
+    <input type="email" required>
+    <span></span>
+  </div>
+  <div>
+    <label>Age</label>
+    <input type="number" required>
+    <span></span>
+  </div>
+</body>
+</html>

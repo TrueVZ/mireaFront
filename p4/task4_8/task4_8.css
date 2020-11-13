@@ -1,0 +1,44 @@
+div{
+    margin: 5px;
+    display: block;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+.first{
+    background-color: blueviolet;
+    transition: all 2s ease;
+}
+.first:hover{
+    transform: translate(100px, 0);
+}
+.second{
+    background-color: brown;
+    transition: all 1s linear;
+}
+.second:hover{
+    transform: rotate(75deg);
+}
+.third{
+    background-color: burlywood;
+}
+.third:hover{
+    transform: scale(2);
+}
+.four{
+    background: rgb(24, 133, 60);
+    transition: 1s;
+}
+.four:hover{
+    transform: translate(100px, 100px);
+}
+.five{
+    background: darkblue;
+    transition: 2s;
+}
+.five:hover{
+    transform: rotate(-360deg) translate(100px);
+}

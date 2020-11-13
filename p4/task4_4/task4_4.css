@@ -1,0 +1,30 @@
+.battery {
+    width: 150px;
+    height: 50px;
+    border: 5px solid black;
+    margin-bottom: 10px;
+    position: relative;
+
+    }
+
+    .battery::after { 
+    width: 10px;
+    height: 20px;
+    background: #000;
+    right: -10px;
+    top: 15px;
+   }
+    
+   .low{
+        background: linear-gradient(to right, red 0%, red 33%, white 33%);
+    }
+   .medium{
+        background: linear-gradient(to right, yellow 0%, yellow 66%, white 33%);
+    }
+   .full{
+        background: green;
+    }
+   .battery::before, .battery::after {
+    content: '';
+    position: absolute;
+   }

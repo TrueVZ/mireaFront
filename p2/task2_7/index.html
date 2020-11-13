@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>canvas</title>
+  <meta charset="utf-8">
+  <script> 
+   window.onload = function() {
+    var drawingCanvas = document.getElementById('print');
+    var context = drawingCanvas.getContext('2d');
+    context.font = "20px Arial";
+    context.fillText("Заикин В.П", 0, 20)
+    context.beginPath();
+    context.rect(40, 40, 150, 100);
+    context.rect(50, 50, 130, 80)
+    context.stroke();
+    
+   }
+  </script>
+ </head>
+ <body>
+  <canvas id="print" width="500" height="500">
+  </canvas>
+ </body>
+</html>

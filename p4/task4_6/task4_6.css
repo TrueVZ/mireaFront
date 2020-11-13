@@ -1,0 +1,44 @@
+.item{
+  padding: 3px;
+  margin-right: 5px;
+  width: 25px;
+  float: left;
+}
+.item::before, .item::after {
+  content: '';
+  position: absolute;
+ }
+.item::before{
+  content: attr(proc);
+  font-size: 12px;
+}
+.proc10 {
+background-color: red;
+height: 10%;
+margin-top: 90%;
+}
+.proc25 {
+background-color: orange;
+height: 25%;
+margin-top: 75%;
+}
+.proc50 {
+background-color: yellow;
+height: 50%;
+margin-top: 50%;
+}
+.proc75 {
+background-color: lightgreen;
+height: 75%;
+margin-top: 25%;
+}
+.proc100 {
+background-color: green;
+height: 100%;
+}
+.graph{
+ height: 200px;
+ width: 200px; 
+ padding-bottom: 10px;
+}
+  
