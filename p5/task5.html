@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task_5</title>
+</head>
+<body>
+   <script>
+       let secHour = 60 * 60;
+       let secDay =  secHour * 24;
+       let secMonth = secDay  * 30;
+       alert('Секунд в часе: ' + secHour + "\nСекунд в сутках: " + secDay + "\nСекунд в месяце: " + secMonth)
+
+       let date = new Date();
+       let currHour = date.getHours();
+       let currMinutes = date.getMinutes();
+       let currSeconds = date.getSeconds();
+       alert(currHour + ':' + currMinutes + ':' + currSeconds);
+
+       let num = 10;
+       num **= 2;
+       alert(num);
+   </script> 
+</body>
+</html>
