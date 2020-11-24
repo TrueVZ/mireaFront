@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var text = "я учу javascript!"
+    // 1 
+    console.log(text.length)
+    // 2
+    console.log(text.substr(1, 4));
+    console.log(text.substring(1, 5));
+    console.log(text.slice(1, 5))
+    // 3
+    console.log(text.indexOf('учу'))
+    // 4 
+    var str = "Hello world!"
+    var n = 4;
+    if (str.length > n){
+        var result = str.slice(0, 4) + '...';
+    } else {
+        var result = str;
+    }
+    console.log(result)
+</script>
+</html>

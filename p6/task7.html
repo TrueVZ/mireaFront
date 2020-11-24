@@ -12,14 +12,15 @@
         for (let i = 0; i < arr.length; i++)
             result += arr[i];
 
-        alert(Math.round(result / arr.length));
+        console.log(Math.round(result / arr.length));
 
         let a = 10;
         result = 1;
 
-        for (let i = 0; i < a; i++)
-            result *= (i + 1);
-        alert(result);
+        for (let i = 1; i < a; i++)
+            result *= i;
+        console.log(result);
+        
    </script> 
 </body>
 </html>
