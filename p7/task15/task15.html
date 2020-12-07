@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        #largeImg {
+            width: 550px;
+            height: 400px;
+            padding: 5px;
+            border: solid 1px grey;
+        }
+
+        #thumbs img {
+            width: 100px;
+            height: 100px;
+            padding: 3px;
+            margin: 2px;
+            float: left;
+            border: solid 1px grey;
+        }
+
+        #thumbs li {
+            list-style: none;
+        }
+
+        #thumbs {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <img id="largeImg" src="https://www.flaticon.com/svg/static/icons/svg/3851/3851129.svg">
+        <ul id="thumbs">
+            <li>
+                <img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851152.svg">
+            </li>
+            <li>
+                <img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851185.svg">
+            </li>
+            <li>
+                <img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851129.svg">
+
+            </li>
+        </ul>
+    </p>
+    <script>
+        thumbs.onclick = function (event){
+            let thumbnail = event.target.closest('img');
+            
+            if (!thumbnail) return;
+            showThumbnail(thumbnail.src);
+            event.preventDefault();
+        }
+
+        function showThumbnail(src){
+            largeImg.src = src;
+        }
+    </script>
+</body>
+</html>

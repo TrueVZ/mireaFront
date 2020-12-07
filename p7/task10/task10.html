@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .remove {
+            position: absolute;
+            color: red;
+            display: block;
+            right: 10px;
+            text-align: center;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+
+        }
+        .msg {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi adipisci accusamus, ratione voluptas a incidunt est cupiditate cum labore porro earum maiores ea obcaecati vero nostrum ab odit esse facilis.</div>
+    <div class="msg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dignissimos itaque ut eius minima voluptatum, explicabo laudantium tempore voluptatem voluptates beatae at cumque esse asperiores nam, inventore quae nulla! Nobis.</div>
+    <div class="msg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, delectus laudantium. Repudiandae sapiente modi iste nisi tenetur nemo at illum fuga ea, commodi quisquam. Illum vel minus esse sed distinctio.</div>
+    <script>
+        let messages = document.querySelectorAll(".msg")
+        console.log(messages)
+        for (let msg of messages){
+            msg.insertAdjacentHTML("afterbegin", '<button class="remove">[x]</button>');
+            msg.firstChild.onclick = () => msg.remove();
+        }
+    </script>
+</body>
+</html>

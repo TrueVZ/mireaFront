@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #elem {
+            width: 100px;
+            height: 300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="elem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellendus non! Eius nesciunt omnis aut aspernatur cumque consectetur excepturi tenetur iure odio optio laboriosam, rem, eaque maiores sit repellat fugiat.
+
+    </div>
+    <input type="submit" onclick="foo()">
+    <script>
+        function foo(){
+            let elem = document.querySelector("#elem")
+            elem.scrollTop = elem.scrollWidth - 100;
+        }
+    </script>
+</body>
+</html>

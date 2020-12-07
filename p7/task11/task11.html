@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        ul img {
+            width: 130px;
+            height: 130px;
+            display: block;
+        }
+
+        .gallery li {
+            display: inline-block;
+        }
+
+        .slider {
+            position: relative;
+            width: 390px;
+            padding: 10px 40px;
+            position: relative;
+            background: #eeeeee;
+        }
+
+        .gallery {
+            width: 390px;
+            overflow: hidden;
+        }
+        .gallery ul {
+            height: 150px;
+            width: 9999px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0;
+            transition: margin-left 250ms;
+            font-size: 0;
+        }
+
+        .arrow {
+            padding: 0;
+            border: none;
+            display: block;
+            position: absolute;
+            top: 60px;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider" class="slider">
+        <button class="arrow prev">&#8592;</button>
+        <div class="gallery">
+            <ul class="images">
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851122.svg"></li>
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851126.svg"></li>
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851152.svg"></li>
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851176.svg"></li>
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851146.svg" alt=""></li>
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851191.svg" alt=""></li>
+                <li><img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851206.svg" </li>
+            </ul>
+        </div>
+        <button class="arrow next">&#8594;</button>
+    </div>
+    <script>
+        let i = 1;
+        for (let li of document.querySelectorAll('li')) {
+            li.style.position = 'relative';
+            li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+            i++;
+        }
+
+        let width = 130;
+        let count = 3;
+
+        let list = slider.querySelector('ul');
+        let listElems = slider.querySelectorAll('li');
+
+        let position = 0;
+
+        slider.querySelector('.prev').onclick = function () {
+            console.log("left")
+            position += width * count;
+            position = Math.min(position, 0);
+            list.style.marginLeft = position + 'px';
+        };
+
+        slider.querySelector('.next').onclick = function () {
+            console.log("right")
+            position -= width * count;
+            position = Math.max(position, -width * (listElems.length - count));
+            list.style.marginLeft = position + 'px';
+        }
+    </script>
+</body>
+
+</html>

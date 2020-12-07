@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tooltip {
+            position: fixed;
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            background: black
+        }
+    </style>
+</head>
+<body>
+   <div data-tooltip="подсказка">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore porro nostrum illum, corporis aperiam voluptatem? Deleniti cum maxime in error minima, maiores doloribus eum corrupti sed quidem expedita perspiciatis!
+   </div> 
+      <div data-tooltip="подсказка1">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore porro nostrum illum, corporis aperiam voluptatem? Deleniti cum maxime in error minima, maiores doloribus eum corrupti sed quidem expedita perspiciatis!
+   </div> 
+      <div data-tooltip="подсказка2">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore porro nostrum illum, corporis aperiam voluptatem? Deleniti cum maxime in error minima, maiores doloribus eum corrupti sed quidem expedita perspiciatis!
+   </div> 
+      <div data-tooltip="подсказка3">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore porro nostrum illum, corporis aperiam voluptatem? Deleniti cum maxime in error minima, maiores doloribus eum corrupti sed quidem expedita perspiciatis!
+   </div> 
+      <div data-tooltip="подсказка4">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore porro nostrum illum, corporis aperiam voluptatem? Deleniti cum maxime in error minima, maiores doloribus eum corrupti sed quidem expedita perspiciatis!
+   </div> 
+
+   <script>
+       let tooltipElem;
+
+       document.onmouseover = function(e){
+           let target = e.target;
+
+           let tooltipHtml = target.dataset.tooltip;
+           if (!tooltipHtml) return;
+
+           tooltipElem = document.createElement('div');
+           tooltipElem.className = 'tooltip';
+           tooltipElem.innerHTML = tooltipHtml;
+           document.body.append(tooltipElem);
+
+           let coords = target.getBoundingClientRect();
+
+           let left = coords.left + (target.offsetWidth- tooltipElem.offsetWidth) / 2;
+           if (left < 0) left = 0;
+
+           let top = coords.top - tooltipElem.offsetHeight - 5;
+           if (top < 0) {
+               top = coords.top + target.offsetHeight + 5;
+           }
+
+           tooltipElem.style.left = left + 'px';
+           tooltipElem.style.top = top + 'px';
+           
+       };
+
+       document.onmouseout = function(e){
+           if (tooltipElem) { tooltipElem.remove();
+        tooltipElem = null;}
+       }
+   </script>
+</body>
+</html>

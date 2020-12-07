@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <def id="contents">Lorem, ipsum dolor sit <a href="https://vk.com/feed">VK </a>amet consectetur adipisicing elit. Magni ipsam velit harum nihil laborum iure facilis sapiente, minima sint! Beatae quod eveniet molestias aliquam nobis ex commodi, veritatis aspernatur. Itaque!</def>
+    <script>
+        contents.onclick = function(e){
+            function clickLink(href){
+                let isleaveAlert = confirm(`Вы хотите перейти на ${href}`)
+                if (!isleaveAlert) return false;
+            }
+
+            let target = e.target.closest('a');
+
+            if (target && contents.contains(target)) {
+                return clickLink(target.getAttribute('href'));
+            }
+        }
+    </script>
+</body>
+</html>

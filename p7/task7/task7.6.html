@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id='clock'>00:00:00</p>
+</body>
+<script>
+    window.setInterval(timer, 500);
+        function timer() {
+            const date = new Date();
+            const clock = document.getElementById('clock')
+            clock.innerHTML = fixZero(24 - date.getHours()) + ":" + fixZero(60 - date.getMinutes()) + ":" + fixZero(60 - date.getSeconds())
+        }
+        function fixZero(num) {
+            if (num < 10) return '0' + num;
+            else return num;
+
+        }
+</script>
+</html>
