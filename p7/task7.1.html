@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>0</p>
+    <button> Click me</button>
+    <script>
+        const btn = document.querySelector("button")
+        btn.onclick = function(){
+            window.setInterval(foo, 1000);
+        }
+        function foo(){
+            let text = document.querySelector("p");
+            text.innerHTML = parseInt(text.innerHTML) + 1;
+        }
+    </script>
+</body>
+</html>

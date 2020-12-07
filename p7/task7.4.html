@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/3851/3851126.svg"">
+    <script>
+        let index = 0;
+        let images = ["https://www.flaticon.com/svg/static/icons/svg/3851/3851126.svg", "https://www.flaticon.com/svg/static/icons/svg/3851/3851152.svg", "https://www.flaticon.com/svg/static/icons/svg/3851/3851159.svg", "https://www.flaticon.com/svg/static/icons/svg/3851/3851188.svg"]
+        window.setInterval(foo, 1000)
+        function foo(){
+            index++;
+            document.querySelector("img").src = images[index% 4]
+        }
+    </script>
+</body>
+</html>

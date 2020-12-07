@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://yandex.ru/">1 page</a><br>
+    <a href="https://www.youtube.com/">2 page</a><br>
+    <a href="https://www.google.com/">3 page</a><br>
+    <button> Click me</button>
+    <script>
+        const btn = document.querySelector("button")
+        btn.onclick = function(){
+            let links = document.getElementsByTagName("a");
+            for (var i = 0; i < links.length; i++){
+                links[i].innerHTML += ' (' + links[i].getAttribute("href") + ') ';
+            }
+        }
+    </script>
+</body>
+</html>

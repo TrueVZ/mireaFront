@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <img id="1" src="https://www.flaticon.com/svg/static/icons/svg/3522/3522763.svg">
+  <img id="2" src="https://www.flaticon.com/svg/static/icons/svg/3522/3522782.svg">
+  <img id="3" src="https://www.flaticon.com/svg/static/icons/svg/3522/3522808.svg"> 
+  <br>
+  <button onclick="start()">Start</button>  
+  <button onclick="stop()">Stop</button>
+  <script>
+    let index = 1;
+    let images = ["https://www.flaticon.com/svg/static/icons/svg/3522/3522738.svg", "https://www.flaticon.com/svg/static/icons/svg/3522/3522763.svg", "https://www.flaticon.com/svg/static/icons/svg/3522/3522782.svg", "https://www.flaticon.com/svg/static/icons/svg/3522/3522808.svg"];
+    let myInterval;
+    let img1 = document.getElementById("1")
+    let img2 = document.getElementById("2")
+    let img3 = document.getElementById("3")
+    function start(){
+      myInterval = setInterval(timer, 1000);
+    }
+
+    function stop(){
+      window.clearInterval(myInterval);
+    }
+
+    function timer(){
+      index = index < 4 ? index++ : 0;
+      img1.src = images[index == 0 ? 3 : index-1]
+      img2.src = images[index]  
+      img3.src = images[index == 3 ? 0  : index+1];
+      index++;
+    }
+  </script>
+</body>
+</html>

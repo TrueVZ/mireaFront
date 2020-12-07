@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="first"> First button</button>
+    <button id="second">Second button </button>
+    <script>
+        const btn1 = document.getElementById('first')
+        const btn2 = document.getElementById('second')
+        btn1.onclick = function(){
+            btn1.disabled = true;
+        }
+        btn2.onclick = function(){
+            btn1.disabled = false;
+        }
+    </script>
+</body>
+</html>

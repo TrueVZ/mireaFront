@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    +
+    <input type="text" id="input2">
+    =
+    <span id="res">  0</span>
+    <br>
+    <button> Click me</button>
+    <script>
+        const btn = document.querySelector("button")
+        btn.onclick = function (e){
+            let input1 = document.getElementById("input1")
+            let input2 = document.getElementById("input2");
+            document.getElementById("res").innerHTML = parseInt(input1.value, 10) + parseInt(input2.value, 10);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dignissimos magni dolores nobis quos eligendi iste excepturi, earum, quisquam porro quae adipisci nihil corporis, quia quidem eveniet libero deserunt incidunt!</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel maxime consequuntur autem iure totam odio officia fugit ea, nobis dolorum excepturi modi similique eveniet ipsam aut, eligendi quibusdam ad assumenda!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium velit earum nulla optio dolorem quis cumque similique aspernatur minima voluptatem nesciunt nihil a, esse ea neque perferendis! Tempora, optio fugit!</p>
+  <button>Click me</button>  
+  <script>
+      const btn = document.querySelector("button")
+      btn.onclick = function(){
+          const texts = document.getElementsByTagName("p")
+          for (var i = 0; i < texts.length-1; i++){
+              texts[i].innerHTML = "Text";
+          }
+      }
+  </script>
+</body>
+</html>

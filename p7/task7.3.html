@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p onclick="start()"> 00:00:00</p>
+    <script>
+
+        window.timer = window.setInterval(clock, 500);
+        function clock() {
+            let text = document.querySelector("p");
+            let date = new Date();
+            text.innerHTML = fixZero(date.getHours()) + ":" + fixZero(date.getMinutes()) + ":" + fixZero(date.getSeconds())
+        }
+        function fixZero(num) {
+            if (num < 10) return '0' + num;
+            else return num;
+
+        }
+    </script>
+</body>
+
+</html>
