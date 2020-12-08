@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="animate.js"></script>
+</head>
+
+<body>
+
+
+    <textarea id="textArea" style="width: 500px; height: 200px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sapiente, blanditiis aliquid recusandae repudiandae laborum numquam, veniam magnam iste in nihil. Suscipit iste aspernatur sed qui voluptas nesciunt, maiores vero.
+  </textarea>
+    <br>
+    <button onclick="animateText(textArea)">Click me</button>
+
+    <script>
+        function animateText(textArea) {
+            let text = textArea.value;
+            let to = text.length,
+                from = 0;
+
+            animate({
+                duration: 5000,
+                timing: bounce,
+                draw: function (progress) {
+                    let result = (to - from) * progress + from;
+                    textArea.value = text.substr(0, Math.ceil(result))
+                }
+            });
+        }
+
+
+        function bounce(timeFraction) {
+            for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+                if (timeFraction >= (7 - 4 * a) / 11) {
+                    return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                }
+            }
+        }
+
+       
+    </script>
+
+
+</body>
+
+</html>

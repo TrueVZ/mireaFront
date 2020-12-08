@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="animate.js"></script>
+    <style>
+        #planka {
+            height: 200px;
+            border-bottom: 3px black groove;
+            position: relative;
+        }
+
+        #ball {
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="planka">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/53/53283.svg" width="50" height="50" id="ball">
+
+    </div>
+    <script>
+        function easeOut(timing) {
+            return function (timeFraction) {
+                return 1 - timing(1 - timeFraction);
+            }
+        }
+
+        function bounce(time) {
+            for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+                if (time >= (7 - 4 * a) / 11) {
+                    return -Math.pow((11 - 6 * a - 11 * time) / 4, 2) + Math.pow(b, 2)
+                }
+            }
+        }
+
+        ball.onclick = function () {
+            let to = planka.clientHeight - ball.clientHeight;
+
+            animate({
+                duration: 2000,
+                timing: easeOut(bounce),
+                draw(progress) {
+                    ball.style.top = to * progress + 'px'
+                }
+
+            });
+        }
+    </script>
+</body>
+
+</html>
